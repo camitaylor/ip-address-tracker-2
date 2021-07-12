@@ -1054,7 +1054,7 @@ try {
   var _App = require('./App');
   var _AppDefault = _parcelHelpers.interopDefault(_App);
   require('./style.css');
-  var _jsxFileName = "/Users/camitaylor/Documents/dev/apprentice-react/src/index.jsx";
+  var _jsxFileName = "/Users/camitaylor/Documents/dev/ip-address-tracker-2/src/index.jsx";
   _reactDom.render(/*#__PURE__*/_reactDefault.default.createElement(_AppDefault.default, {
     __self: undefined,
     __source: {
@@ -26276,7 +26276,7 @@ try {
   var _componentsHeaderDefault = _parcelHelpers.interopDefault(_componentsHeader);
   var _componentsMap = require('./components/Map');
   var _componentsMapDefault = _parcelHelpers.interopDefault(_componentsMap);
-  var _jsxFileName = "/Users/camitaylor/Documents/dev/apprentice-react/src/App.jsx";
+  var _jsxFileName = "/Users/camitaylor/Documents/dev/ip-address-tracker-2/src/App.jsx";
   const App = () => {
     return (
       /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -26328,7 +26328,7 @@ try {
   require('../hooks/useFetch');
   var _Info = require('./Info');
   var _InfoDefault = _parcelHelpers.interopDefault(_Info);
-  var _jsxFileName = "/Users/camitaylor/Documents/dev/apprentice-react/src/components/Header.jsx", _s = $RefreshSig$();
+  var _jsxFileName = "/Users/camitaylor/Documents/dev/ip-address-tracker-2/src/components/Header.jsx", _s = $RefreshSig$();
   const Header = () => {
     _s();
     const [searchValue, setSearchValue] = _react.useState('');
@@ -26389,7 +26389,7 @@ try {
   _parcelHelpers.defineInteropFlag(exports);
   var _react = require('react');
   var _reactDefault = _parcelHelpers.interopDefault(_react);
-  var _jsxFileName = "/Users/camitaylor/Documents/dev/apprentice-react/src/components/Search.jsx", _s = $RefreshSig$();
+  var _jsxFileName = "/Users/camitaylor/Documents/dev/ip-address-tracker-2/src/components/Search.jsx", _s = $RefreshSig$();
   const Search = ({searchValue, setSearchValue}) => {
     _s();
     const [value, setValue] = _react.useState(searchValue);
@@ -26706,7 +26706,7 @@ try {
   var _reactDefault = _parcelHelpers.interopDefault(_react);
   var _hooksUseFetch = require('../hooks/useFetch');
   var _hooksUseFetchDefault = _parcelHelpers.interopDefault(_hooksUseFetch);
-  var _jsxFileName = "/Users/camitaylor/Documents/dev/apprentice-react/src/components/Info.jsx", _s = $RefreshSig$();
+  var _jsxFileName = "/Users/camitaylor/Documents/dev/ip-address-tracker-2/src/components/Info.jsx", _s = $RefreshSig$();
   // import Search from './Search';
   const Info = ({searchValue}) => {
     _s();
@@ -26871,7 +26871,7 @@ try {
   var _react = require('react');
   var _reactDefault = _parcelHelpers.interopDefault(_react);
   var _reactLeaflet = require('react-leaflet');
-  var _jsxFileName = "/Users/camitaylor/Documents/dev/apprentice-react/src/components/Map.jsx";
+  var _jsxFileName = "/Users/camitaylor/Documents/dev/ip-address-tracker-2/src/components/Map.jsx";
   const Map = () => {
     var _s = $RefreshSig$();
     function LocationMarker() {
