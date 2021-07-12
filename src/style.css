@@ -1,0 +1,58 @@
+/* .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+} */
+
+
+.header-container {
+  background-image: url("../images/pattern-bg.png");
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  padding-top: 30px;
+}
+
+form {
+  text-align: center;
+}
+
+.info-container {
+  color: black;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  border: solid white;
+  border-radius: 10px;
+  background-color: red;
+  text-align: center;
+  width: 75%;
+  margin-top: 25px;
+}
+
+.vl {
+  border-right: 6px solid gray;
+  height: 25px;
+}
+
+li {
+  display: inline-flex;
+  justify-content: center;
+  background-color: greenyellow;
+}
+
+input {
+  width: 30%;
+  display: inline;
+  padding-left: 5px;
+  font-size: 20px;
+}
+
+h4 {
+  color: purple;
+  z-index: 10;
+}
