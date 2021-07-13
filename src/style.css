@@ -21,38 +21,40 @@ form {
   text-align: center;
 }
 
-.info-container {
+.container {
   color: black;
   display: flex;
   justify-content: center;
   margin: auto;
   border: solid white;
   border-radius: 10px;
-  background-color: red;
+  background-color: whitesmoke;
   text-align: center;
-  width: 75%;
+  width: 65%;
   margin-top: 25px;
+  height: 100px;
 }
 
-.vl {
-  border-right: 6px solid gray;
-  height: 25px;
+h5 {
+  font-weight: bold;
+}
+h6 {
+  margin-top: 15px;
 }
 
-li {
-  display: inline-flex;
-  justify-content: center;
-  background-color: greenyellow;
+.col {
+  border-right: 2px solid gray;
+  height: 75px;
+}
+
+.col:last-child {
+  border-right: none;
 }
 
 input {
-  width: 30%;
+  width: 35%;
   display: inline;
   padding-left: 5px;
   font-size: 20px;
 }
 
-h4 {
-  color: purple;
-  z-index: 10;
-}

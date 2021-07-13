@@ -13,36 +13,27 @@ const Info = ({searchValue}) => {
     const ipAddress = res.response.ip;
     const isp = res.response.isp;
     
-  //   const [dataValues, setDataValues] = useState({
-  //     ipAddress: '',
-  //     city: '',
-  //     region: '',
-  //     postalCode: '',
-  //     timezone: '',
-  //     isp: '',
-  //   });
-
-  // const dataReceived = () => {
-  //   setDataValues(dataValues)
-  // }
-    
-
   return (
-    <div className="info-container">
-      <ul>
-        <li className="item">IP ADDRESS</li>
-        <h4>{ipAddress}</h4>
-        <div className="vl"></div>
-        <li className="item">LOCATION</li>
-        <h4>{city}, {region}</h4>
-        <h4>{postalCode}</h4>
-        <div className="vl"></div>
-        <li className="item">TIME ZONE</li>
-        <h4>{timezone}</h4>
-        <div className="vl"></div>
-        <li className="item">ISP</li>
-        <h4>{isp}</h4> 
-      </ul>
+    <div className='container'>
+      <div className='row d-flex align-items-center mt-1 mb-2'>
+        <div className="col">
+          <h5>IP Address</h5>
+          <h6>{ipAddress}</h6>
+        </div>
+        <div className="col">
+          <h5>Location</h5>
+          <h6>{city}, {region}</h6> 
+          <h6>{postalCode}</h6>
+        </div>
+        <div className="col">
+          <h5>Time Zone</h5>
+          <h6>{timezone}</h6>
+        </div>
+        <div className="col">
+          <h5>ISP</h5>
+          <h6>{isp}</h6>
+        </div>
+      </div>
     </div>
   )
 }

@@ -26726,125 +26726,119 @@ try {
     const {city, region, postalCode, timezone} = res.response.location;
     const ipAddress = res.response.ip;
     const isp = res.response.isp;
-    // const [dataValues, setDataValues] = useState({
-    // ipAddress: '',
-    // city: '',
-    // region: '',
-    // postalCode: '',
-    // timezone: '',
-    // isp: '',
-    // });
-    // const dataReceived = () => {
-    // setDataValues(dataValues)
-    // }
     return (
       /*#__PURE__*/_reactDefault.default.createElement("div", {
-        className: "info-container",
+        className: "container",
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 31,
+          lineNumber: 17,
           columnNumber: 5
         }
-      }, /*#__PURE__*/_reactDefault.default.createElement("ul", {
+      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "row d-flex align-items-center mt-1 mb-2",
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 18,
+          columnNumber: 7
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "col",
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 19,
+          columnNumber: 9
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("h5", {
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 20,
+          columnNumber: 11
+        }
+      }, "IP Address"), /*#__PURE__*/_reactDefault.default.createElement("h6", {
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 21,
+          columnNumber: 11
+        }
+      }, ipAddress)), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "col",
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 23,
+          columnNumber: 9
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("h5", {
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 24,
+          columnNumber: 11
+        }
+      }, "Location"), /*#__PURE__*/_reactDefault.default.createElement("h6", {
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 25,
+          columnNumber: 11
+        }
+      }, city, ", ", region), /*#__PURE__*/_reactDefault.default.createElement("h6", {
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 26,
+          columnNumber: 11
+        }
+      }, postalCode)), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "col",
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 28,
+          columnNumber: 9
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("h5", {
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 29,
+          columnNumber: 11
+        }
+      }, "Time Zone"), /*#__PURE__*/_reactDefault.default.createElement("h6", {
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 30,
+          columnNumber: 11
+        }
+      }, timezone)), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "col",
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 32,
-          columnNumber: 7
+          columnNumber: 9
         }
-      }, /*#__PURE__*/_reactDefault.default.createElement("li", {
-        className: "item",
+      }, /*#__PURE__*/_reactDefault.default.createElement("h5", {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 33,
-          columnNumber: 9
+          columnNumber: 11
         }
-      }, "IP ADDRESS"), /*#__PURE__*/_reactDefault.default.createElement("h4", {
+      }, "ISP"), /*#__PURE__*/_reactDefault.default.createElement("h6", {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 34,
-          columnNumber: 9
+          columnNumber: 11
         }
-      }, ipAddress), /*#__PURE__*/_reactDefault.default.createElement("div", {
-        className: "vl",
-        __self: undefined,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 35,
-          columnNumber: 9
-        }
-      }), /*#__PURE__*/_reactDefault.default.createElement("li", {
-        className: "item",
-        __self: undefined,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 36,
-          columnNumber: 9
-        }
-      }, "LOCATION"), /*#__PURE__*/_reactDefault.default.createElement("h4", {
-        __self: undefined,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 37,
-          columnNumber: 9
-        }
-      }, city, ", ", region), /*#__PURE__*/_reactDefault.default.createElement("h4", {
-        __self: undefined,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 38,
-          columnNumber: 9
-        }
-      }, postalCode), /*#__PURE__*/_reactDefault.default.createElement("div", {
-        className: "vl",
-        __self: undefined,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 39,
-          columnNumber: 9
-        }
-      }), /*#__PURE__*/_reactDefault.default.createElement("li", {
-        className: "item",
-        __self: undefined,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 40,
-          columnNumber: 9
-        }
-      }, "TIME ZONE"), /*#__PURE__*/_reactDefault.default.createElement("h4", {
-        __self: undefined,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 41,
-          columnNumber: 9
-        }
-      }, timezone), /*#__PURE__*/_reactDefault.default.createElement("div", {
-        className: "vl",
-        __self: undefined,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 42,
-          columnNumber: 9
-        }
-      }), /*#__PURE__*/_reactDefault.default.createElement("li", {
-        className: "item",
-        __self: undefined,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 43,
-          columnNumber: 9
-        }
-      }, "ISP"), /*#__PURE__*/_reactDefault.default.createElement("h4", {
-        __self: undefined,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 44,
-          columnNumber: 9
-        }
-      }, isp)))
+      }, isp))))
     );
   };
   _s(Info, "y8uEuLFgqaPXQxYUFOLsMqh7FtE=", false, function () {
