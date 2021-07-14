@@ -7,7 +7,6 @@ const Search = ({searchValue, setSearchValue}) => {
     setValue(e.target.value);
   }
 
-
   const onFormSubmit = (e) => {
     e.preventDefault();
     setSearchValue(value);
@@ -30,5 +29,5 @@ const Search = ({searchValue, setSearchValue}) => {
   )
 }
 
-export default Search
+export default Search;
 

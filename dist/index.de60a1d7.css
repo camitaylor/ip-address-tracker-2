@@ -9,6 +9,8 @@
 
 .header-container {
   background-image: url("pattern-bg.bd1a4bc0.png");
+  height: 200px;
+  z-index: 0;
 }
 
 
@@ -36,6 +38,13 @@ form {
   width: 65%;
   margin-top: 25px;
   height: 100px;
+  position: relative;
+  z-index: 2;
+}
+
+
+#map {
+  z-index: -1;
 }
 
 
@@ -66,6 +75,8 @@ input {
   padding-left: 5px;
   font-size: 20px;
 }
+
+
 
 
 /*# sourceMappingURL=index.de60a1d7.css.map */

@@ -1,17 +1,34 @@
-import React from 'react';
+import React, {useState, useEffect } from 'react';
 import useFetch from '../hooks/useFetch';
-//import Search from './Search';
 
-const Info = ({searchValue}) => {
+const Info = ({searchValue, setLat, setLng}) => {
+    const [city, setCity] = useState('');
+    const [region, setRegion] = useState('');
+    const [timezone, setTimezone] = useState('');
+    const [ipAddress, setIpAddress] = useState('');
+    const [isp, setIsp] = useState('');
 
     const res = useFetch(`https://geo.ipify.org/api/v1?apiKey=at_2U9EnXiYCVcq3fL6WUdKU23QMEMED&ipAddress=${searchValue}`);
-    if (!res.response) {
-      return <div>Loading...</div>
-    }
+    
+    
+    useEffect(() => {
+      if(res.response) {
+      
+      setCity(res.response.location.city)
+      setIpAddress(res.response.ipAddress)
+      setIsp(res.response.isp)
+      setLat(res.response.location.lat)
+      setLng(res.response.location.lng)
+      setRegion(res.response.location.region)
+      setTimezone(res.response.location.timezone)
+      }
+    }, [res]);
 
-    const { city, region, postalCode, timezone } = res.response.location;
-    const ipAddress = res.response.ip;
-    const isp = res.response.isp;
+    if (!res.response) {
+      console.log(searchValue)
+      return <div>Loading...</div> 
+    }
+  
     
   return (
     <div className='container'>
@@ -23,7 +40,7 @@ const Info = ({searchValue}) => {
         <div className="col">
           <h5>Location</h5>
           <h6>{city}, {region}</h6> 
-          <h6>{postalCode}</h6>
+          {/* <h6 style={{fontStyle: 'italic', fontSize: '12px', }}>{lat}, {lng}</h6> */}
         </div>
         <div className="col">
           <h5>Time Zone</h5>
@@ -38,4 +55,4 @@ const Info = ({searchValue}) => {
   )
 }
 
-export default Info
+export default Info;

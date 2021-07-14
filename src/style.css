@@ -9,6 +9,8 @@
 
 .header-container {
   background-image: url("../images/pattern-bg.png");
+  height: 200px;
+  z-index: 0;
 }
 
 h1 {
@@ -33,6 +35,12 @@ form {
   width: 65%;
   margin-top: 25px;
   height: 100px;
+  position: relative;
+  z-index: 2;
+}
+
+#map {
+  z-index: -1;
 }
 
 h5 {
@@ -57,4 +65,6 @@ input {
   padding-left: 5px;
   font-size: 20px;
 }
+
+
 
