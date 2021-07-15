@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 
 const Header = () => {
   return (
     <div className="header-container">
-      <h1>IP Address Tracker</h1>
+      <h2>IP Address Tracker</h2>
     </div>
   )
 }

@@ -23,7 +23,7 @@ const Search = ({searchValue, setSearchValue}) => {
           value={value}
           placeholder="Search for any IP address or domain">
         </input>
-        <button className="btn">Submit</button>
+        <button className="btn">&gt;</button>
       </form>
     </div>
   )

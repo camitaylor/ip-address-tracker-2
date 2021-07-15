@@ -26288,23 +26288,19 @@ try {
     const [searchValue, setSearchValue] = _react.useState('');
     const [lat, setLat] = _react.useState(38);
     const [lng, setLng] = _react.useState(-94);
-    console.log(lat);
-    console.log(lng);
-    // setLat(res.response.location.lat);
-    // setLng(res.response.location.lng);
     return (
       /*#__PURE__*/_reactDefault.default.createElement("div", {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 21,
+          lineNumber: 16,
           columnNumber: 5
         }
       }, /*#__PURE__*/_reactDefault.default.createElement(_componentsHeaderDefault.default, {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 22,
+          lineNumber: 17,
           columnNumber: 7
         }
       }), /*#__PURE__*/_reactDefault.default.createElement(_componentsSearchDefault.default, {
@@ -26313,7 +26309,7 @@ try {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 23,
+          lineNumber: 18,
           columnNumber: 7
         }
       }), /*#__PURE__*/_reactDefault.default.createElement(_componentsInfoDefault.default, {
@@ -26323,7 +26319,7 @@ try {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 24,
+          lineNumber: 19,
           columnNumber: 7
         }
       }), /*#__PURE__*/_reactDefault.default.createElement(_componentsMapContainerDefault.default, {
@@ -26332,7 +26328,7 @@ try {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 25,
+          lineNumber: 20,
           columnNumber: 7
         }
       }))
@@ -26349,7 +26345,7 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","./components/Header":"4cInI","./components/Map":"5JEbu","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./components/Search":"3XllY","./components/Info":"7z3FT","./hooks/useFetch":"6sKXv","./components/MapContainer":"3QNiv"}],"4cInI":[function(require,module,exports) {
+},{"react":"3b2NM","./components/Header":"4cInI","./components/Map":"5JEbu","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./components/Search":"3XllY","./components/Info":"7z3FT","./components/MapContainer":"3QNiv","./hooks/useFetch":"6sKXv"}],"4cInI":[function(require,module,exports) {
 var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -26370,7 +26366,7 @@ try {
           lineNumber: 6,
           columnNumber: 5
         }
-      }, /*#__PURE__*/_reactDefault.default.createElement("h1", {
+      }, /*#__PURE__*/_reactDefault.default.createElement("h2", {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
@@ -26612,7 +26608,15 @@ try {
     }, [lat, lng]);
     // const position =[38.95362, -94.73357]
     return (
-      /*#__PURE__*/_reactDefault.default.createElement(_reactDefault.default.Fragment, null, /*#__PURE__*/_reactDefault.default.createElement(_reactLeaflet.TileLayer, {
+      /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "map",
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 18,
+          columnNumber: 5
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement(_reactLeaflet.TileLayer, {
         attribution: "© <a href=\"http://osm.org/copyright\">OpenStreetMap</a> contributors",
         url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
         __self: undefined,
@@ -39578,7 +39582,7 @@ try {
     _react.useEffect(() => {
       if (res.response) {
         setCity(res.response.location.city);
-        setIpAddress(res.response.ipAddress);
+        setIpAddress(res.response.ip);
         setIsp(res.response.isp);
         setLat(res.response.location.lat);
         setLng(res.response.location.lng);
@@ -39665,21 +39669,21 @@ try {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 45,
+          lineNumber: 44,
           columnNumber: 9
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("h5", {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 46,
+          lineNumber: 45,
           columnNumber: 11
         }
       }, "Time Zone"), /*#__PURE__*/_reactDefault.default.createElement("h6", {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 47,
+          lineNumber: 46,
           columnNumber: 11
         }
       }, timezone)), /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -39687,21 +39691,21 @@ try {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 49,
+          lineNumber: 48,
           columnNumber: 9
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("h5", {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 50,
+          lineNumber: 49,
           columnNumber: 11
         }
       }, "ISP"), /*#__PURE__*/_reactDefault.default.createElement("h6", {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 51,
+          lineNumber: 50,
           columnNumber: 11
         }
       }, isp))))
@@ -39779,7 +39783,7 @@ try {
           lineNumber: 26,
           columnNumber: 9
         }
-      }, "Submit")))
+      }, ">")))
     );
   };
   _s(Search, "vulvlKXtYyUkFViNKmjk5qLF37E=");
@@ -39803,8 +39807,6 @@ try {
   _parcelHelpers.defineInteropFlag(exports);
   var _react = require('react');
   var _reactDefault = _parcelHelpers.interopDefault(_react);
-  require('../hooks/useFetch');
-  require('./Info');
   var _reactLeaflet = require('react-leaflet');
   var _Map = require('./Map');
   var _MapDefault = _parcelHelpers.interopDefault(_Map);
@@ -39812,7 +39814,7 @@ try {
   const MapContainer = ({lat, lng, position}) => {
     return (
       /*#__PURE__*/_reactDefault.default.createElement(_reactLeaflet.MapContainer, {
-        id: "map",
+        className: "map",
         style: {
           height: '50vh'
         },
@@ -39847,6 +39849,6 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","../hooks/useFetch":"6sKXv","./Info":"7z3FT","react-leaflet":"5lvcA","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./Map":"5JEbu"}],"6eQIz":[function() {},{}]},["1j6wU","68WUB","1DVjT"], "1DVjT", "parcelRequirecf5c")
+},{"react":"3b2NM","react-leaflet":"5lvcA","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./Map":"5JEbu"}],"6eQIz":[function() {},{}]},["1j6wU","68WUB","1DVjT"], "1DVjT", "parcelRequirecf5c")
 
 //# sourceMappingURL=index.02675e63.js.map

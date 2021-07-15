@@ -11,12 +11,7 @@ const App = () => {
   const [searchValue, setSearchValue] = useState('');
   const [lat, setLat] = useState(38);
   const [lng, setLng] = useState(-94);
-  console.log(lat)
-  console.log(lng)
-
-  // setLat(res.response.location.lat);
-  // setLng(res.response.location.lng);
-
+  
   return (
     <div>
       <Header />

@@ -7,14 +7,14 @@
 } */
 
 
-.header-container {
+.header-container, #search {
   background-image: url("pattern-bg.bd1a4bc0.png");
-  height: 200px;
+  height: 125px;
   z-index: 0;
 }
 
 
-h1 {
+h2 {
   color: white;
   text-align: center;
   padding-top: 30px;
@@ -23,6 +23,15 @@ h1 {
 
 form {
   text-align: center;
+  margin-top: -15px;
+}
+
+
+input {
+  width: 35%;
+  display: inline;
+  padding-left: 5px;
+  font-size: 20px;
 }
 
 
@@ -36,15 +45,16 @@ form {
   background-color: whitesmoke;
   text-align: center;
   width: 65%;
-  margin-top: 25px;
   height: 100px;
   position: relative;
   z-index: 2;
+  margin-top: -50px;
 }
 
 
-#map {
+.map {
   z-index: -1;
+  margin-top: -50px;
 }
 
 
@@ -69,13 +79,14 @@ h6 {
 }
 
 
-input {
-  width: 35%;
-  display: inline;
-  padding-left: 5px;
-  font-size: 20px;
+button {
+  background-color: black;
+  color: white;
+  height: 35px;
+  text-align: center;
+  margin-top: -8px;
+  line-height: 0;
 }
-
 
 
 

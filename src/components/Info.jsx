@@ -15,7 +15,7 @@ const Info = ({searchValue, setLat, setLng}) => {
       if(res.response) {
       
       setCity(res.response.location.city)
-      setIpAddress(res.response.ipAddress)
+      setIpAddress(res.response.ip)
       setIsp(res.response.isp)
       setLat(res.response.location.lat)
       setLng(res.response.location.lng)
@@ -40,7 +40,6 @@ const Info = ({searchValue, setLat, setLng}) => {
         <div className="col">
           <h5>Location</h5>
           <h6>{city}, {region}</h6> 
-          {/* <h6 style={{fontStyle: 'italic', fontSize: '12px', }}>{lat}, {lng}</h6> */}
         </div>
         <div className="col">
           <h5>Time Zone</h5>

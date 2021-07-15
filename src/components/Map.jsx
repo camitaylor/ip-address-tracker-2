@@ -15,7 +15,7 @@ const Map = ({lat, lng}) => {
   // const position =[38.95362, -94.73357]
 
   return(
-    <>
+    <div className='map'>
       <TileLayer
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -25,7 +25,7 @@ const Map = ({lat, lng}) => {
           You are here
         </Popup>
       </Marker>
-    </>
+    </div>
   )
 }
 
