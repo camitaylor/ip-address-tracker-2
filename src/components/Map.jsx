@@ -1,18 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import useFetch from '../hooks/useFetch';
-import Info  from './Info';
-import { MapContainer, TileLayer, Marker, Popup, MapConsumer, useMap } from 'react-leaflet';
+import React, { useEffect } from 'react';
+import { TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 
 const Map = ({lat, lng}) => {
   const map = useMap();
   
-  const position = [lat, lng]
+  const position = [lat, lng];
+
   useEffect(() => {
     map.setView(position)
   }, [lat,lng])
-
-
-  // const position =[38.95362, -94.73357]
 
   return(
     <div className='map'>
@@ -29,5 +25,4 @@ const Map = ({lat, lng}) => {
   )
 }
 
-  
 export default Map;

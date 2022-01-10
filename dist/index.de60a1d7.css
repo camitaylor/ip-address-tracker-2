@@ -1,39 +1,27 @@
-/* .attribution {
-  font-size: 11px;
-  text-align: center;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
-} */
-
-
 .header-container, #search {
   background-image: url("pattern-bg.bd1a4bc0.png");
-  height: 125px;
+  height: 160px;
   z-index: 0;
-}
+ }
 
-
-h2 {
+h1 {
   color: white;
   text-align: center;
   padding-top: 30px;
 }
 
-
 form {
   text-align: center;
-  margin-top: -15px;
+  margin-top: -35px;
 }
-
 
 input {
   width: 35%;
+  height: 50px;
   display: inline;
   padding-left: 5px;
   font-size: 20px;
 }
-
 
 .container {
   color: black;
@@ -44,48 +32,40 @@ input {
   border-radius: 10px;
   background-color: whitesmoke;
   text-align: center;
-  width: 65%;
-  height: 100px;
+  width: 60%;
+  height: 150px;
   position: relative;
   z-index: 2;
-  margin-top: -50px;
+  margin-top: -70px;
 }
-
 
 .map {
   z-index: -1;
-  margin-top: -50px;
+  margin-top: -80px;
 }
-
 
 h5 {
   font-weight: bold;
 }
 
-
 h6 {
   margin-top: 15px;
 }
 
-
 .col {
   border-right: 2px solid gray;
-  height: 75px;
+  height: 100px;
 }
-
 
 .col:last-child {
   border-right: none;
 }
 
-
 button {
   background-color: black;
   color: white;
-  height: 35px;
-  text-align: center;
-  margin-top: -8px;
-  line-height: 0;
+  height: 50px;
+  margin-top: -5px;
 }
 
 

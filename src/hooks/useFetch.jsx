@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 const useFetch = (url) => {
   const [response, setResponse] = useState(null);
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+  
   useEffect(() => {
     const fetchData = async() => {
       setIsLoading(true);
@@ -18,6 +19,7 @@ const useFetch = (url) => {
     };
     fetchData();
   }, [url]);
+  
   return { response, error, isLoading };
 };
 
