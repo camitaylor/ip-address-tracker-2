@@ -7,7 +7,6 @@ const Search = ({searchValue, setSearchValue}) => {
     setValue(e.target.value);
   }
 
-
   const onFormSubmit = (e) => {
     e.preventDefault();
     setSearchValue(value);
@@ -24,11 +23,11 @@ const Search = ({searchValue, setSearchValue}) => {
           value={value}
           placeholder="Search for any IP address or domain">
         </input>
-        <button className="btn">Submit</button>
+        <button className="btn">&gt;</button>
       </form>
     </div>
   )
 }
 
-export default Search
+export default Search;
 

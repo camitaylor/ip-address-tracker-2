@@ -7,11 +7,13 @@
 } */
 
 
-.header-container {
+.header-container, #search {
   background-image: url("../images/pattern-bg.png");
+  height: 125px;
+  z-index: 0;
 }
 
-h1 {
+h2 {
   color: white;
   text-align: center;
   padding-top: 30px;
@@ -19,40 +21,60 @@ h1 {
 
 form {
   text-align: center;
+  margin-top: -15px;
 }
 
-.info-container {
+input {
+  width: 35%;
+  display: inline;
+  padding-left: 5px;
+  font-size: 20px;
+}
+
+.container {
   color: black;
   display: flex;
   justify-content: center;
   margin: auto;
   border: solid white;
   border-radius: 10px;
-  background-color: red;
+  background-color: whitesmoke;
   text-align: center;
-  width: 75%;
-  margin-top: 25px;
+  width: 65%;
+  height: 100px;
+  position: relative;
+  z-index: 2;
+  margin-top: -50px;
 }
 
-.vl {
-  border-right: 6px solid gray;
-  height: 25px;
+.map {
+  z-index: -1;
+  margin-top: -50px;
 }
 
-li {
-  display: inline-flex;
-  justify-content: center;
-  background-color: greenyellow;
+h5 {
+  font-weight: bold;
+}
+h6 {
+  margin-top: 15px;
 }
 
-input {
-  width: 30%;
-  display: inline;
-  padding-left: 5px;
-  font-size: 20px;
+.col {
+  border-right: 2px solid gray;
+  height: 75px;
 }
 
-h4 {
-  color: purple;
-  z-index: 10;
+.col:last-child {
+  border-right: none;
 }
+
+button {
+  background-color: black;
+  color: white;
+  height: 35px;
+  text-align: center;
+  margin-top: -8px;
+  line-height: 0;
+}
+
+

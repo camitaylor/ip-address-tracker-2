@@ -1,19 +1,12 @@
-import React, { useState } from 'react';
-import Search from './Search';
-import useFetch from '../hooks/useFetch';
-import Info from './Info';
-
+import React from 'react';
 
 
 const Header = () => {
-  const [searchValue, setSearchValue] = useState('');
   return (
     <div className="header-container">
-      <h1>IP Address Tracker</h1>
-      <Search searchValue={searchValue} setSearchValue={setSearchValue}/>
-      <Info searchValue={searchValue}/>
+      <h2>IP Address Tracker</h2>
     </div>
   )
 }
 
-export default Header
+export default Header;
