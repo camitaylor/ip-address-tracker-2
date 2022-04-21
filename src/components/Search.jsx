@@ -15,15 +15,17 @@ const Search = ({searchValue, setSearchValue}) => {
   return (
     <div>
       <form id="search" onSubmit={onFormSubmit}>
-        <input
-          onChange={handleSearchInputChange}
-          className="search"
-          name="search"
-          type="search"
-          value={value}
-          placeholder="Search for any IP address or domain">
-        </input>
-        <button className="btn">&gt;</button>
+        <div>
+          <input
+            onChange={handleSearchInputChange}
+            className="search"
+            name="search"
+            type="search"
+            value={value}
+            placeholder="Search for any IP address or domain">
+          </input>
+          <button className="btn">&gt;</button>
+        </div>
       </form>
     </div>
   )

@@ -26274,10 +26274,8 @@ try {
   var _reactDefault = _parcelHelpers.interopDefault(_react);
   var _componentsHeader = require('./components/Header');
   var _componentsHeaderDefault = _parcelHelpers.interopDefault(_componentsHeader);
-  require('./components/Map');
   var _componentsSearch = require('./components/Search');
   var _componentsSearchDefault = _parcelHelpers.interopDefault(_componentsSearch);
-  require('./hooks/useFetch');
   var _componentsInfo = require('./components/Info');
   var _componentsInfoDefault = _parcelHelpers.interopDefault(_componentsInfo);
   var _componentsMapContainer = require('./components/MapContainer');
@@ -26293,14 +26291,14 @@ try {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 16,
+          lineNumber: 14,
           columnNumber: 5
         }
       }, /*#__PURE__*/_reactDefault.default.createElement(_componentsHeaderDefault.default, {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 17,
+          lineNumber: 15,
           columnNumber: 7
         }
       }), /*#__PURE__*/_reactDefault.default.createElement(_componentsSearchDefault.default, {
@@ -26309,7 +26307,7 @@ try {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 18,
+          lineNumber: 16,
           columnNumber: 7
         }
       }), /*#__PURE__*/_reactDefault.default.createElement(_componentsInfoDefault.default, {
@@ -26319,7 +26317,7 @@ try {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 19,
+          lineNumber: 17,
           columnNumber: 7
         }
       }), /*#__PURE__*/_reactDefault.default.createElement(_componentsMapContainerDefault.default, {
@@ -26328,7 +26326,7 @@ try {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 20,
+          lineNumber: 18,
           columnNumber: 7
         }
       }))
@@ -26345,7 +26343,7 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","./components/Header":"4cInI","./components/Map":"5JEbu","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./components/Search":"3XllY","./components/Info":"7z3FT","./components/MapContainer":"3QNiv","./hooks/useFetch":"6sKXv"}],"4cInI":[function(require,module,exports) {
+},{"react":"3b2NM","./components/Header":"4cInI","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./components/Search":"3XllY","./components/Info":"7z3FT","./components/MapContainer":"3QNiv"}],"4cInI":[function(require,module,exports) {
 var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -26363,14 +26361,14 @@ try {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 6,
+          lineNumber: 5,
           columnNumber: 5
         }
-      }, /*#__PURE__*/_reactDefault.default.createElement("h2", {
+      }, /*#__PURE__*/_reactDefault.default.createElement("h1", {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 7,
+          lineNumber: 6,
           columnNumber: 7
         }
       }, "IP Address Tracker"))
@@ -26585,7 +26583,7 @@ function registerExportsForReactRefresh(module) {
   }
 }
 
-},{"react-refresh/runtime":"592mh"}],"5JEbu":[function(require,module,exports) {
+},{"react-refresh/runtime":"592mh"}],"3XllY":[function(require,module,exports) {
 var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -26595,68 +26593,338 @@ try {
   _parcelHelpers.defineInteropFlag(exports);
   var _react = require('react');
   var _reactDefault = _parcelHelpers.interopDefault(_react);
-  require('../hooks/useFetch');
-  require('./Info');
-  var _reactLeaflet = require('react-leaflet');
-  var _jsxFileName = "/Users/camitaylor/Documents/dev/ip-address-tracker-2/src/components/Map.jsx", _s = $RefreshSig$();
-  const Map = ({lat, lng}) => {
+  var _jsxFileName = "/Users/camitaylor/Documents/dev/ip-address-tracker-2/src/components/Search.jsx", _s = $RefreshSig$();
+  const Search = ({searchValue, setSearchValue}) => {
     _s();
-    const map = _reactLeaflet.useMap();
-    const position = [lat, lng];
-    _react.useEffect(() => {
-      map.setView(position);
-    }, [lat, lng]);
-    // const position =[38.95362, -94.73357]
+    const [value, setValue] = _react.useState(searchValue);
+    const handleSearchInputChange = e => {
+      setValue(e.target.value);
+    };
+    const onFormSubmit = e => {
+      e.preventDefault();
+      setSearchValue(value);
+    };
     return (
       /*#__PURE__*/_reactDefault.default.createElement("div", {
-        className: "map",
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 16,
+          columnNumber: 5
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("form", {
+        id: "search",
+        onSubmit: onFormSubmit,
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 17,
+          columnNumber: 7
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 18,
-          columnNumber: 5
+          columnNumber: 9
         }
-      }, /*#__PURE__*/_reactDefault.default.createElement(_reactLeaflet.TileLayer, {
-        attribution: "© <a href=\"http://osm.org/copyright\">OpenStreetMap</a> contributors",
-        url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+      }, /*#__PURE__*/_reactDefault.default.createElement("input", {
+        onChange: handleSearchInputChange,
+        className: "search",
+        name: "search",
+        type: "search",
+        value: value,
+        placeholder: "Search for any IP address or domain",
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 19,
-          columnNumber: 7
+          columnNumber: 11
         }
-      }), /*#__PURE__*/_reactDefault.default.createElement(_reactLeaflet.Marker, {
-        position: position,
+      }), /*#__PURE__*/_reactDefault.default.createElement("button", {
+        className: "btn",
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 23,
-          columnNumber: 7
+          lineNumber: 27,
+          columnNumber: 11
         }
-      }, /*#__PURE__*/_reactDefault.default.createElement(_reactLeaflet.Popup, {
-        __self: undefined,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 24,
-          columnNumber: 9
-        }
-      }, "You are here")))
+      }, ">"))))
     );
   };
-  _s(Map, "IoceErwr5KVGS9kN4RQ1bOkYMAg=", false, function () {
-    return [_reactLeaflet.useMap];
-  });
-  _c = Map;
-  exports.default = Map;
+  _s(Search, "vulvlKXtYyUkFViNKmjk5qLF37E=");
+  _c = Search;
+  exports.default = Search;
   var _c;
-  $RefreshReg$(_c, "Map");
+  $RefreshReg$(_c, "Search");
   helpers.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","react-leaflet":"5lvcA","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","../hooks/useFetch":"6sKXv","./Info":"7z3FT"}],"5lvcA":[function(require,module,exports) {
+},{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"7z3FT":[function(require,module,exports) {
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require('react');
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  var _hooksUseFetch = require('../hooks/useFetch');
+  var _hooksUseFetchDefault = _parcelHelpers.interopDefault(_hooksUseFetch);
+  var _jsxFileName = "/Users/camitaylor/Documents/dev/ip-address-tracker-2/src/components/Info.jsx", _s = $RefreshSig$();
+  const Info = ({searchValue, setLat, setLng}) => {
+    _s();
+    const [city, setCity] = _react.useState('');
+    const [region, setRegion] = _react.useState('');
+    const [timezone, setTimezone] = _react.useState('');
+    const [ipAddress, setIpAddress] = _react.useState('');
+    const [isp, setIsp] = _react.useState('');
+    const res = _hooksUseFetchDefault.default(`https://geo.ipify.org/api/v1?apiKey=at_2U9EnXiYCVcq3fL6WUdKU23QMEMED&ipAddress=${searchValue}`);
+    _react.useEffect(() => {
+      if (res.response) {
+        setCity(res.response.location.city);
+        setIpAddress(res.response.ip);
+        setIsp(res.response.isp);
+        setLat(res.response.location.lat);
+        setLng(res.response.location.lng);
+        setRegion(res.response.location.region);
+        setTimezone(res.response.location.timezone);
+      }
+    }, [res]);
+    if (!res.response) {
+      console.log(searchValue);
+      return (
+        /*#__PURE__*/_reactDefault.default.createElement("div", {
+          __self: undefined,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 29,
+            columnNumber: 14
+          }
+        }, "Loading...")
+      );
+    }
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "container",
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 34,
+          columnNumber: 5
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "row d-flex align-items-center mt-1 mb-2",
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 35,
+          columnNumber: 7
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "col",
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 36,
+          columnNumber: 9
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("h5", {
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 37,
+          columnNumber: 11
+        }
+      }, "IP Address"), /*#__PURE__*/_reactDefault.default.createElement("h6", {
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 38,
+          columnNumber: 11
+        }
+      }, ipAddress)), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "col",
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 40,
+          columnNumber: 9
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("h5", {
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 41,
+          columnNumber: 11
+        }
+      }, "Location"), /*#__PURE__*/_reactDefault.default.createElement("h6", {
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 42,
+          columnNumber: 11
+        }
+      }, city, ", ", region)), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "col",
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 44,
+          columnNumber: 9
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("h5", {
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 45,
+          columnNumber: 11
+        }
+      }, "Time Zone"), /*#__PURE__*/_reactDefault.default.createElement("h6", {
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 46,
+          columnNumber: 11
+        }
+      }, timezone)), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "col",
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 48,
+          columnNumber: 9
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("h5", {
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 49,
+          columnNumber: 11
+        }
+      }, "ISP"), /*#__PURE__*/_reactDefault.default.createElement("h6", {
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 50,
+          columnNumber: 11
+        }
+      }, isp))))
+    );
+  };
+  _s(Info, "jzpnSC95FeusaIBralB0TF/HPGE=", false, function () {
+    return [_hooksUseFetchDefault.default];
+  });
+  _c = Info;
+  exports.default = Info;
+  var _c;
+  $RefreshReg$(_c, "Info");
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+
+},{"react":"3b2NM","../hooks/useFetch":"6sKXv","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"6sKXv":[function(require,module,exports) {
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require('react');
+  var _s = $RefreshSig$();
+  const useFetch = url => {
+    _s();
+    const [response, setResponse] = _react.useState(null);
+    const [error, setError] = _react.useState(null);
+    const [isLoading, setIsLoading] = _react.useState(false);
+    _react.useEffect(() => {
+      const fetchData = async () => {
+        setIsLoading(true);
+        try {
+          const res = await fetch(url);
+          const json = await res.json();
+          setResponse(json);
+          setIsLoading(false);
+        } catch (error) {
+          setError(error);
+        }
+      };
+      fetchData();
+    }, [url]);
+    return {
+      response,
+      error,
+      isLoading
+    };
+  };
+  _s(useFetch, "SidzYcyb4YGJTTTUNWYqMWhZ6T8=");
+  exports.default = useFetch;
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+
+},{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"3QNiv":[function(require,module,exports) {
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require('react');
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  var _reactLeaflet = require('react-leaflet');
+  var _Map = require('./Map');
+  var _MapDefault = _parcelHelpers.interopDefault(_Map);
+  var _jsxFileName = "/Users/camitaylor/Documents/dev/ip-address-tracker-2/src/components/MapContainer.jsx";
+  const MapContainer = ({lat, lng, position}) => {
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement(_reactLeaflet.MapContainer, {
+        className: "map",
+        style: {
+          height: '75vh'
+        },
+        center: position,
+        zoom: 13,
+        scrollWheelZoom: false,
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 8,
+          columnNumber: 7
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement(_MapDefault.default, {
+        lat: lat,
+        lng: lng,
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 14,
+          columnNumber: 9
+        }
+      }))
+    );
+  };
+  _c = MapContainer;
+  exports.default = MapContainer;
+  var _c;
+  $RefreshReg$(_c, "MapContainer");
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+
+},{"react":"3b2NM","react-leaflet":"5lvcA","./Map":"5JEbu","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"5lvcA":[function(require,module,exports) {
 "use strict";
 
 exports.__esModule = true;
@@ -39515,289 +39783,7 @@ const ZoomControl = (0, _core.createControlComponent)(function createZoomControl
   return new _leaflet.Control.Zoom(props);
 });
 exports.ZoomControl = ZoomControl;
-},{"@react-leaflet/core":"6LCTE","leaflet":"QyATM"}],"6sKXv":[function(require,module,exports) {
-var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-helpers.prelude(module);
-try {
-  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
-  _parcelHelpers.defineInteropFlag(exports);
-  var _react = require('react');
-  var _s = $RefreshSig$();
-  const useFetch = url => {
-    _s();
-    const [response, setResponse] = _react.useState(null);
-    const [error, setError] = _react.useState(null);
-    const [isLoading, setIsLoading] = _react.useState(false);
-    _react.useEffect(() => {
-      const fetchData = async () => {
-        setIsLoading(true);
-        try {
-          const res = await fetch(url);
-          const json = await res.json();
-          setResponse(json);
-          setIsLoading(false);
-        } catch (error) {
-          setError(error);
-        }
-      };
-      fetchData();
-    }, [url]);
-    return {
-      response,
-      error,
-      isLoading
-    };
-  };
-  _s(useFetch, "SidzYcyb4YGJTTTUNWYqMWhZ6T8=");
-  exports.default = useFetch;
-  helpers.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-
-},{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"7z3FT":[function(require,module,exports) {
-var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-helpers.prelude(module);
-try {
-  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
-  _parcelHelpers.defineInteropFlag(exports);
-  var _react = require('react');
-  var _reactDefault = _parcelHelpers.interopDefault(_react);
-  var _hooksUseFetch = require('../hooks/useFetch');
-  var _hooksUseFetchDefault = _parcelHelpers.interopDefault(_hooksUseFetch);
-  var _jsxFileName = "/Users/camitaylor/Documents/dev/ip-address-tracker-2/src/components/Info.jsx", _s = $RefreshSig$();
-  const Info = ({searchValue, setLat, setLng}) => {
-    _s();
-    const [city, setCity] = _react.useState('');
-    const [region, setRegion] = _react.useState('');
-    const [timezone, setTimezone] = _react.useState('');
-    const [ipAddress, setIpAddress] = _react.useState('');
-    const [isp, setIsp] = _react.useState('');
-    const res = _hooksUseFetchDefault.default(`https://geo.ipify.org/api/v1?apiKey=at_2U9EnXiYCVcq3fL6WUdKU23QMEMED&ipAddress=${searchValue}`);
-    _react.useEffect(() => {
-      if (res.response) {
-        setCity(res.response.location.city);
-        setIpAddress(res.response.ip);
-        setIsp(res.response.isp);
-        setLat(res.response.location.lat);
-        setLng(res.response.location.lng);
-        setRegion(res.response.location.region);
-        setTimezone(res.response.location.timezone);
-      }
-    }, [res]);
-    if (!res.response) {
-      console.log(searchValue);
-      return (
-        /*#__PURE__*/_reactDefault.default.createElement("div", {
-          __self: undefined,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 29,
-            columnNumber: 14
-          }
-        }, "Loading...")
-      );
-    }
-    return (
-      /*#__PURE__*/_reactDefault.default.createElement("div", {
-        className: "container",
-        __self: undefined,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 34,
-          columnNumber: 5
-        }
-      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
-        className: "row d-flex align-items-center mt-1 mb-2",
-        __self: undefined,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 35,
-          columnNumber: 7
-        }
-      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
-        className: "col",
-        __self: undefined,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 36,
-          columnNumber: 9
-        }
-      }, /*#__PURE__*/_reactDefault.default.createElement("h5", {
-        __self: undefined,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 37,
-          columnNumber: 11
-        }
-      }, "IP Address"), /*#__PURE__*/_reactDefault.default.createElement("h6", {
-        __self: undefined,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 38,
-          columnNumber: 11
-        }
-      }, ipAddress)), /*#__PURE__*/_reactDefault.default.createElement("div", {
-        className: "col",
-        __self: undefined,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 40,
-          columnNumber: 9
-        }
-      }, /*#__PURE__*/_reactDefault.default.createElement("h5", {
-        __self: undefined,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 41,
-          columnNumber: 11
-        }
-      }, "Location"), /*#__PURE__*/_reactDefault.default.createElement("h6", {
-        __self: undefined,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 42,
-          columnNumber: 11
-        }
-      }, city, ", ", region)), /*#__PURE__*/_reactDefault.default.createElement("div", {
-        className: "col",
-        __self: undefined,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 44,
-          columnNumber: 9
-        }
-      }, /*#__PURE__*/_reactDefault.default.createElement("h5", {
-        __self: undefined,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 45,
-          columnNumber: 11
-        }
-      }, "Time Zone"), /*#__PURE__*/_reactDefault.default.createElement("h6", {
-        __self: undefined,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 46,
-          columnNumber: 11
-        }
-      }, timezone)), /*#__PURE__*/_reactDefault.default.createElement("div", {
-        className: "col",
-        __self: undefined,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 48,
-          columnNumber: 9
-        }
-      }, /*#__PURE__*/_reactDefault.default.createElement("h5", {
-        __self: undefined,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 49,
-          columnNumber: 11
-        }
-      }, "ISP"), /*#__PURE__*/_reactDefault.default.createElement("h6", {
-        __self: undefined,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 50,
-          columnNumber: 11
-        }
-      }, isp))))
-    );
-  };
-  _s(Info, "jzpnSC95FeusaIBralB0TF/HPGE=", false, function () {
-    return [_hooksUseFetchDefault.default];
-  });
-  _c = Info;
-  exports.default = Info;
-  var _c;
-  $RefreshReg$(_c, "Info");
-  helpers.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-
-},{"react":"3b2NM","../hooks/useFetch":"6sKXv","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"3XllY":[function(require,module,exports) {
-var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-helpers.prelude(module);
-try {
-  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
-  _parcelHelpers.defineInteropFlag(exports);
-  var _react = require('react');
-  var _reactDefault = _parcelHelpers.interopDefault(_react);
-  var _jsxFileName = "/Users/camitaylor/Documents/dev/ip-address-tracker-2/src/components/Search.jsx", _s = $RefreshSig$();
-  const Search = ({searchValue, setSearchValue}) => {
-    _s();
-    const [value, setValue] = _react.useState(searchValue);
-    const handleSearchInputChange = e => {
-      setValue(e.target.value);
-    };
-    const onFormSubmit = e => {
-      e.preventDefault();
-      setSearchValue(value);
-    };
-    return (
-      /*#__PURE__*/_reactDefault.default.createElement("div", {
-        __self: undefined,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 16,
-          columnNumber: 5
-        }
-      }, /*#__PURE__*/_reactDefault.default.createElement("form", {
-        id: "search",
-        onSubmit: onFormSubmit,
-        __self: undefined,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 17,
-          columnNumber: 7
-        }
-      }, /*#__PURE__*/_reactDefault.default.createElement("input", {
-        onChange: handleSearchInputChange,
-        className: "search",
-        name: "search",
-        type: "search",
-        value: value,
-        placeholder: "Search for any IP address or domain",
-        __self: undefined,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 18,
-          columnNumber: 9
-        }
-      }), /*#__PURE__*/_reactDefault.default.createElement("button", {
-        className: "btn",
-        __self: undefined,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 26,
-          columnNumber: 9
-        }
-      }, ">")))
-    );
-  };
-  _s(Search, "vulvlKXtYyUkFViNKmjk5qLF37E=");
-  _c = Search;
-  exports.default = Search;
-  var _c;
-  $RefreshReg$(_c, "Search");
-  helpers.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-
-},{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"3QNiv":[function(require,module,exports) {
+},{"@react-leaflet/core":"6LCTE","leaflet":"QyATM"}],"5JEbu":[function(require,module,exports) {
 var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -39808,47 +39794,63 @@ try {
   var _react = require('react');
   var _reactDefault = _parcelHelpers.interopDefault(_react);
   var _reactLeaflet = require('react-leaflet');
-  var _Map = require('./Map');
-  var _MapDefault = _parcelHelpers.interopDefault(_Map);
-  var _jsxFileName = "/Users/camitaylor/Documents/dev/ip-address-tracker-2/src/components/MapContainer.jsx";
-  const MapContainer = ({lat, lng, position}) => {
+  var _jsxFileName = "/Users/camitaylor/Documents/dev/ip-address-tracker-2/src/components/Map.jsx", _s = $RefreshSig$();
+  const Map = ({lat, lng}) => {
+    _s();
+    const map = _reactLeaflet.useMap();
+    const position = [lat, lng];
+    _react.useEffect(() => {
+      map.setView(position);
+    }, [lat, lng]);
     return (
-      /*#__PURE__*/_reactDefault.default.createElement(_reactLeaflet.MapContainer, {
+      /*#__PURE__*/_reactDefault.default.createElement("div", {
         className: "map",
-        style: {
-          height: '50vh'
-        },
-        center: position,
-        zoom: 13,
-        scrollWheelZoom: false,
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 10,
-          columnNumber: 7
+          lineNumber: 14,
+          columnNumber: 5
         }
-      }, /*#__PURE__*/_reactDefault.default.createElement(_MapDefault.default, {
-        lat: lat,
-        lng: lng,
+      }, /*#__PURE__*/_reactDefault.default.createElement(_reactLeaflet.TileLayer, {
+        attribution: "© <a href=\"http://osm.org/copyright\">OpenStreetMap</a> contributors",
+        url: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 11,
+          lineNumber: 15,
           columnNumber: 7
         }
-      }))
+      }), /*#__PURE__*/_reactDefault.default.createElement(_reactLeaflet.Marker, {
+        position: position,
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 19,
+          columnNumber: 7
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement(_reactLeaflet.Popup, {
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 20,
+          columnNumber: 9
+        }
+      }, "You are here")))
     );
   };
-  _c = MapContainer;
-  exports.default = MapContainer;
+  _s(Map, "IoceErwr5KVGS9kN4RQ1bOkYMAg=", false, function () {
+    return [_reactLeaflet.useMap];
+  });
+  _c = Map;
+  exports.default = Map;
   var _c;
-  $RefreshReg$(_c, "MapContainer");
+  $RefreshReg$(_c, "Map");
   helpers.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","react-leaflet":"5lvcA","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./Map":"5JEbu"}],"6eQIz":[function() {},{}]},["1j6wU","68WUB","1DVjT"], "1DVjT", "parcelRequirecf5c")
+},{"react":"3b2NM","react-leaflet":"5lvcA","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"6eQIz":[function() {},{}]},["1j6wU","68WUB","1DVjT"], "1DVjT", "parcelRequirecf5c")
 
 //# sourceMappingURL=index.02675e63.js.map
